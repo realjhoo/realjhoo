@@ -1,0 +1,95 @@
+/* =-=-= style.css -=-=-= 
+    JL Hoover 2019
+*/
+
+@font-face {
+    font-family: 'Cinzel', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {    
+    font-family: 'Montserrat';
+    background: white;
+    text-decoration: none;
+}
+
+.main-header {
+
+    text-align: center;
+                                 
+    background: linear-gradient(#ffb3b3, transparent 1%), 
+                linear-gradient(0deg, #fff, transparent),
+                #fff url("../img/sunset.jpg") no-repeat center;
+
+    background-size: cover;  /*This forces img to be correct size */
+}
+
+.main-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    /*font-size: 5.625rem; /* 90px/16px  */
+    
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 5px 8px 10px #222;
+    margin: 12px 0 0;
+}
+
+.my-face {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+
+    transition: all .5s ease-in-out;
+}
+
+.my-face:hover {
+    transform: scale(1.5) rotate(55deg);
+}
+
+.main_footer {
+    text-align: center;
+    font-size: smaller;
+    vertical-align: baseline;
+}
+
+.main_footer img {
+    vertical-align: baseline;
+     margin-top: 15px;
+     margin-left: 3px;
+     margin-right: 3px;
+}
+
+/*.clearfix::after {
+  content: "";
+  clear: both;
+  overflow: auto;
+}*/
+
+/* =-=-=-=-=-=-=-=-=-=- Media Queries -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+@media (min-width: 769px) {
+    
+    .portfolio,
+    .useful_stuff
+     {
+        display: inline-block;
+        width:  45%;
+        vertical-align: top;
+        padding: 15px;
+    }
+
+    .about,
+    .news_etc {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+        padding: 15px;
+    }
+
+    .main-header h1 {
+        font-size: 110px; /* this doesnt actually work */
+    }
+
+}
