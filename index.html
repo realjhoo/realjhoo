@@ -45,13 +45,17 @@
         <section class="about">
             <h2>About Me</h2>
             <p>Lorem</p>
-      
+      <img class = "my-face" src = "img/lab.jpg">
         </section>
 
     <!-- ---------- The news and weather localized for the visitor  -->
         <section class="news_etc">
             <h2>Your News and Weather </h2>
             <p>Lorem </p>
+            <div id="openweathermap-widget-12"></div>
+            <script>
+            window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 12,cityid: '2643743',appid: '2168d87bb78a91aca88433486ac650b1',units: 'imperial',containerid: 'openweathermap-widget-12',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+            </script>
         </section>
     </div> <!-- END of SECOND ROW --------------------------------  -->
 
