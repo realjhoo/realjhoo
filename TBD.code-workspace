@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "resume test/css"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Two Brave Dogs"
+	}
+}

@@ -16,7 +16,7 @@ body {
 .main-header {
 
     text-align: center;
-                                 
+
     background: linear-gradient(#ffb3b3, transparent 1%), 
                 linear-gradient(0deg, #fff, transparent),
                 #fff url("../img/sunset.jpg") no-repeat center;
@@ -55,7 +55,7 @@ body {
 }
 
 .main_footer img {
-    vertical-align: baseline;
+     vertical-align: baseline;
      margin-top: 15px;
      margin-left: 3px;
      margin-right: 3px;
@@ -73,7 +73,7 @@ body {
     
     .portfolio,
     .useful_stuff
-     {
+    {
         display: inline-block;
         width:  45%;
         vertical-align: top;
