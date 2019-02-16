@@ -5,24 +5,32 @@
 @font-face {
     font-family: 'Cinzel', serif;
     font-family: 'Montserrat', sans-serif;
+    src: url("https://fonts.googleapis.com/css?family=Cinzel|Montserrat")
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {    
     font-family: 'Montserrat';
-    background: white;
+    background: #fff;
     text-decoration: none;
 }
 
 .main-header {
-
     text-align: center;
-
+    /*
     background: linear-gradient(#ffb3b3, transparent 1%), 
                 linear-gradient(0deg, #fff, transparent),
-                #fff url("../img/sunset.jpg") no-repeat center;
-
-    background-size: cover;  /*This forces img to be correct size */
+                #fff url("../img/sunset.jpg") no-repeat center; 
+    */
+    background: linear-gradient(#f88484,  #fff 50%), url("../img/sunset.jpg") no-repeat center;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    position: relative;
 }
+
 
 .main-header h1 {
     font-family: 'Cinzel', serif;
@@ -36,16 +44,47 @@ body {
     margin: 12px 0 0;
 }
 
+header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    transform: skewY(-2deg);
+    background-color: #fff;
+    bottom: -25px;
+}
+
+.first-row {
+    padding-top: 10px;
+}
+
+h2 {
+    /*font-family: 'Cinzel', serif;*/
+    /*color: rgba(20, 5, 155, 0.603)*/
+    text-shadow: 5px 8px 10px #555;
+}
+
 .my-face {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-
+    width: 188px;
+    border: 4px solid white;
+    position: relative;
     transition: all .5s ease-in-out;
+    z-index: 100;
 }
 
 .my-face:hover {
     transform: scale(1.5) rotate(55deg);
+}
+
+a {
+    color: #6c7677;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c25921;
 }
 
 .main_footer {
@@ -55,10 +94,10 @@ body {
 }
 
 .main_footer img {
-     vertical-align: baseline;
-     margin-top: 15px;
-     margin-left: 3px;
-     margin-right: 3px;
+    vertical-align: baseline;
+    margin-top: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 /*.clearfix::after {
@@ -72,8 +111,7 @@ body {
 @media (min-width: 769px) {
     
     .portfolio,
-    .useful_stuff
-    {
+    .skills_abilities {
         display: inline-block;
         width:  45%;
         vertical-align: top;
@@ -92,4 +130,16 @@ body {
         font-size: 110px; /* this doesnt actually work */
     }
 
+} /* end media min-width 769*/
+
+@media (min-width: 1400px) {
+    header::after { 
+        height:70px;
+        transform: skewY(-2deg);
+        bottom: -35px;
+    }
+
+    .first-row {
+        padding-top: 50px;
+    }
 }
