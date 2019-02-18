@@ -8,6 +8,7 @@
     <head>
         <title>Jerry L Hoover</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="../img/favicon.png">
         <script src="javascript/script.js"></script>
         <script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"></script>
 
@@ -15,7 +16,6 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="The landing page for the web dev work of Jerry L Hoover, aka, RealJHoo, aka, Two Brave Dogs">
         <meta name="author" content="Jerry L Hoover">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat" rel="stylesheet"> -->
     </head>
     
     <body>
@@ -30,49 +30,67 @@
         <div class="first-row">   <!-- FIRST ROW --------------   -->
         <section class="portfolio">
             <h2>My Portfolio</h2>
-            <p>Here, I plan on having an image of each site, possibly live, possibly just a screenshot. Underneath each image, there will be two buttons; one which goes to the actual site, and the other which goes to a git repo for the site, if I have anything which I can place there. Obviously, I wont have any code for sites I no longer maintain.</p>
-            <p>I need to figure out how I would archive WordPress sites tho. Hmmm... Better go search that. Since I am just the maintainer, and not the creator, they may not need Gits</p>
+            <p><ul>
+                <li>Screenshot of each site</li>
+                <li>Under each, 2 buttons, one to site, one to Git</li>
+                <li>Git... only for sites that I create</li>
+                <li>Two Brave Dogs will be for freelance business</li>
+                <li>rjh will host my portfolio</li>
+            </ul>
+            
             <h3>Sites I created</h3>
             <p>You are here --> <a href="https://realjhoo.com">RealJHoo</a></p>
-            <p><a href="http://twobravedogs.com">Two Brave Dogs</a></p>
+            <p><a href="https://twobravedogs.com">Two Brave Dogs</a></p>
 
             <h3>Sites I did not create, but am currently responsible for maintaining</h3>
             <p><a href="https://thetorquehub.com">The Torque Hub</a></p>
             <p><a href="https://keepcatfed.com">Keep Cat Fed</a></p>
 
             <h3>Sites I formerly maintained</h3>
-            <p><a href="http://www.fortbendmuseum.org/">The Fort Bend Museum</a></p>
+            <p><a href="https://www.fortbendmuseum.org/">The Fort Bend Museum</a></p>
             <p><a href="https://www.georgeranch.org">George Ranch Historical Park</a></p>
             <p><a href="https://www.rosenbergrrmuseum.org">Rosenberg Railroad Museum</a></p>
+            <p><a href="http://historicrosenberg.org">Historic Rosenberg</a></p>
 
         </section>
-
 
     <!-- ------------Links to skills and abilities ---------------------- -->
         <section class="skills_abilities">
             <h2>Skills and Abilities</h2>
-            <p>I'm no longer sure what goes here, but here are some notes...</p>
+            <p>For now, this is the TODO list.</p>
             <ul>
-                <li>Slanted header</li>
-                <li>A border around my pic that draws in the white from the page below </li>
-                <li>The subtitle needs to pop more. Might need some 3D effect like the main title</li>
-                <li>A JavaScript fun fact below my head and above the content... the text could be a random color</li>
+                <li>DONE - Slanted header</li>
+                <li>DONE - A border around my pic that draws in the white from the page below </li>
+                <li>DONE - The subtitle needs to pop more. Might need some 3D effect like the main title</li>
+                <li>Push my face picture down a bit</li>
+                <li>A JavaScript fun fact inserted in DOM. Location?</li>
                 <li>Something to allieviate the bordom of all that text</li>
+                <li>.</li>
+                <li>Dreamhost for realjhoo.com</li>
+                <li>This would host THIS landing page, which is a glorified About Me page, I guess.</li>
+                <li>Two Brave Dogs needs a purpose</li>
+                <li>TBD could be my freelance self. Here I could advert my services, link back to realjhoo, show the portfolio, and that sort of stuff.</li>
             </ul>
             
             <p>
-                <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa exercitationem ut rerum consequatur est a, cumque cupiditate nam accusantium dicta eligendi consectetur aut deleniti voluptate nisi commodi necessitatibus officia odio?
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa exercitationem ut rerum consequatur est a, cumque cupiditate nam accusantium dicta eligendi consectetur aut deleniti voluptate nisi commodi necessitatibus officia odio?</p>
+
+            <!-- =-=-=-=-=-=- LANGAUAGES =-=-=-==-=-=-=-=-=- -->
+                <ol>
+                    <li><img style="vertical-align:middle" src="../img/html5.png" height="25" width="25">HTML</li>
+                    <li><img style="vertical-align:middle" src="../img/css3.png" height="25" width="25">CSS</li>
+                    <li><img style="vertical-align:middle" src="../img/javascript.png" height="25" width="25">JavaScript</li>
+                    <li><img style="vertical-align:middle" src="../img/python.png" height="25" width="25">Python</li>
+                    <li>VS Code</li>
+                    <li>Github</li>
+                    <li>Sublime Text</li>
                     </ol>
                 </p>
         </section>
     </div> <!--- END OF FIRST ROW ------------------------------  -->
 
-
     <!-- ----------- About Me -----------------------------------  -->
-        <div class="second-row"> <!-- SECOND ROW ----------------  -->
+    <div class="second-row"> <!-- SECOND ROW ----------------  -->
         <section class="about">
             <h2>About Me</h2>
             <p>I wrote my first program in BASIC on a Sinclair, a small computer made entirely of stone knived and bearskins. From there, I learned VisualBasic, Pascal, Delphi, and a smattering of other languages. In college, I made money on the side coding personal websites for local Boomers who didnt know why they needed a website, but wanted one anyway.</p>
@@ -84,18 +102,13 @@
             <h2>Your News and Weather </h2>
             <p>Lorem </p>
             
-            <div id="openweathermap-widget-12"></div>
-            <script>
-            window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 12,cityid: '4699066',appid: '2168d87bb78a91aca88433486ac650b1',units: 'imperial',containerid: 'openweathermap-widget-12',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
-            </script>
-        
         </section>
     </div> <!-- END of SECOND ROW --------------------------------  -->
 
-
     <!-- ---------- The Footer -----------------------------------  -->
         <footer class="main_footer">
-            <span >Copyright &copy; 2019 Jerry L Hoover</span><br>
+            <span>Copyright &copy; 2019 Jerry L Hoover<br></span>
+            <a href="https://twobravedogs.com">Two Brave Dogs</a><br>
             
             <span class = "contact"> 
 
@@ -107,11 +120,10 @@
 
             <a href="https://www.linkedin.com/in/jerry-hoover-tbd/"><img src="img/icons8-linkedin-circled-filled-50.png" height="25" width="25"></a> 
 
-            <a href="#"><img src="img/icons8-instagram-filled-50.png" height="25" width="25"></a> 
+            <a href="https://www.instagram.com/realjhoo/"><img src="img/icons8-instagram-filled-50.png" height="25" width="25"></a> 
 
-            <a href="mailto:jerry.hoover@ymail.com"><img src="img/icons8-email-filled-50.png" height="25" width="25"></a> 
+            <a href="mailto:jerry@realjhoo.com"><img src="img/icons8-email-filled-50.png" height="25" width="25"></a> 
             </span>
-            <!-- https://twitter.com/RealJHoo" -->
         </footer>
     </body>
 </html>
