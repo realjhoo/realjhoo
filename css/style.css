@@ -87,6 +87,12 @@ a:hover {
     color: #c25921;
 }
 
+#funFactDiv {
+    text-align: center;
+    color: darkorange;
+    font-size: 125%;
+}
+
 .main_footer {
     text-align: center;
     font-size: smaller;
