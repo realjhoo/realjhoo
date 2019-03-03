@@ -1,13 +1,14 @@
 DONE - Slanted header
+
 DONE - A border around my pic that draws in the white from the page below
+
 DONE - The subtitle needs to pop more. Might need some 3D effect like the main title
-Would like to push my-face down a little
+
+DONE - Would like to push my-face down a little
 
 DONE - A JavaScript fun fact inserted in DOM. Location?
+
 Something to allieviate the bordom of all that text
 
-DONE - Dreamhost for realjhoo.com
+DONE - Dreamhost for realjhoo.com and revive TwoBraveDogs.com
 
-This would host THIS landing page, which is a glorified About Me page, I guess.
-
-TBD could be my freelance self. Here I could advert my services, link back to realjhoo, show the portfolio, and that sort of stuff.
