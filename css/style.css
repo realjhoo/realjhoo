@@ -1,6 +1,7 @@
 /*
     // Copyright (c) 2019 Jerry L Hoover - Two Brave Dogs
 */
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Montserrat");
 
 @font-face {
     font-family: 'Cinzel', serif;
@@ -49,11 +50,12 @@ header::after {
 }
 
 .first-row {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 h2 {
     font-family: 'Cinzel', serif;
+    font-size: 15px;
     text-shadow: 5px 8px 10px #555;
 }
 
@@ -86,7 +88,7 @@ a:hover {
 }
 
 .langs li {
-    font-size: larger;
+    font-size: large;
     padding-bottom: 5px;
 }
 
@@ -167,9 +169,12 @@ a:hover {
     }
 
     .main-header h1 {
-        font-size: 110px; /* this doesnt actually work */
+        font-size: 110px;
     }
 
+    h2 {
+        font-size: 25px;
+    }
 } /* end media min-width 769*/
 
 @media (min-width: 1400px) {
