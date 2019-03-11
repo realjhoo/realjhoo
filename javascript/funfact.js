@@ -125,3 +125,4 @@ let theFunFact = "<p>" + funFact(funFactIndex) + "</p>";
 
 let insertFunFact = document.getElementById('funFactDiv');
 insertFunFact.insertAdjacentHTML("afterbegin", theFunFact);
+theFunFact = "";
