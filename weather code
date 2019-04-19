@@ -1,7 +1,0 @@
-<!-- WEATHER SCRIPT IN HTML FILE -->
-
-<!-- WEATHER WIDGET API - NOT HAPPY WITH THIS-->
-            <div id="openweathermap-widget-12"></div>
-            <script>
-            window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 12,cityid: '4699066',appid: '2168d87bb78a91aca88433486ac650b1',units: 'imperial',containerid: 'openweathermap-widget-12',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
-            </script>

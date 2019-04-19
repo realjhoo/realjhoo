@@ -1,0 +1,140 @@
+/* TODO
+Create Thumnails
+Hook up menu (pages dont exist yet)
+Hook up the buttons
+Install projects
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Montserrat");
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Montserrat";
+}
+
+h1 {
+   text-align: center;
+   margin: 15px;
+   color: #333;
+   text-shadow: 5px 8px 10px #222;
+   font-family: "Cinzel";
+}
+
+/* NAVIGATION =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.main-nav ul {
+   display: grid;
+   padding: 0;
+   list-style: none;
+   grid-template-columns: repeat(4, 1fr);
+   margin: 5px;
+   margin-bottom: 15px;
+   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.main-nav a {
+   background: #f4f4f4;
+   display: block;
+   text-decoration: none;
+   padding: 0.8em;
+   text-align: center;
+   color: #333;
+   text-transform: uppercase;
+   font-size: 1em;
+}
+
+.main-nav a:hover {
+   color: #ddd;
+   background-color: #333;
+}
+
+footer {
+   text-align: center;
+   background-color: #333;
+   color: #f4f4f4;
+   margin-top: 2em;
+   padding: 2em;
+}
+
+/* OVERLAY EFFECTS =-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=- */
+
+.portfolio-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-gap: 12px;
+   justify-content: center;
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+.box {
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.project-image {
+   line-height: 0;
+}
+
+.project-title {
+   position: absolute;
+   top: 0;
+   left: 0;
+   /* This should match the height & width
+   from the img selector */
+   width: 100%;
+   height: 100%;
+   color: white;
+   font-size: 1.5em;
+   font-weight: bold;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background: rgba(90, 0, 10, 0.4);
+   opacity: 0;
+   transition: opacity 0.5s;
+   z-index: 1;
+}
+
+.project-subtitle {
+   font-size: 0.8em;
+   margin-bottom: 0.7em;
+}
+
+.box:hover .project-title {
+   opacity: 1;
+}
+
+.project-image img {
+   filter: blur(0px);
+   transition: filter 0.3s ease-in;
+   transform: scale(1.1);
+}
+
+.box:hover .project-image img {
+   filter: blur(2px);
+}
+
+.button {
+   background-color: rgba(47, 116, 155, 0.7);
+   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+   border-radius: 5px;
+   font-size: 0.7em;
+   text-transform: uppercase;
+   color: white;
+   text-decoration: none;
+   padding: 5px;
+   margin: 5px;
+}
+
+.button:hover {
+   background-color: rgba(47, 116, 155, 1);
+   transition: all 0.4s;
+}
