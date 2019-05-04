@@ -49,14 +49,6 @@ h1 {
    background-color: #333;
 }
 
-footer {
-   text-align: center;
-   background-color: #333;
-   color: #f4f4f4;
-   margin-top: 2em;
-   padding: 2em;
-}
-
 /* OVERLAY EFFECTS =-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=- */
 
 .portfolio-container {
@@ -64,6 +56,8 @@ footer {
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    grid-gap: 12px;
    justify-content: center;
+   margin-right: 1em;
+   margin-left: 1em;
 }
 
 img {
@@ -75,6 +69,7 @@ img {
    position: relative;
    overflow: hidden;
    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+   border-radius: 5px;
 }
 
 .project-image {
@@ -137,4 +132,17 @@ img {
 .button:hover {
    background-color: rgba(47, 116, 155, 1);
    transition: all 0.4s;
+}
+
+.grade {
+   font-size: 0.5em;
+}
+
+/* FOOTER =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+footer {
+   text-align: center;
+   background-color: #333;
+   color: #f4f4f4;
+   margin-top: 2em;
+   padding: 2em;
 }
