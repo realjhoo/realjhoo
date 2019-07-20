@@ -1,8 +1,5 @@
 /* TODO
-Create Thumnails
 Hook up menu (pages dont exist yet)
-Hook up the buttons
-Install projects
 */
 
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Montserrat");
@@ -74,6 +71,7 @@ img {
 
 .project-image {
    line-height: 0;
+   height: 300px;
 }
 
 .project-title {

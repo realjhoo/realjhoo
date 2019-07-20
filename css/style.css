@@ -2,6 +2,12 @@
 =-=-=-=-=-= TODO =-=-=-==-==-==
 Create face png
 */
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
 body {
    margin: 0;
    background: rgba(0, 0, 0, 0.9);
