@@ -1,3 +1,6 @@
+/* style.css for index and services */
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,6 +13,65 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #fff;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-= SERVICES PAGE =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.services-page {
+  font-family: "Montserrat";
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Cinzel";
+  margin: 1em 0 1em 0;
+}
+
+h2 {
+  font-family: "Cinzel";
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  padding: 0;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.main-nav a {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  background: #f4f4f4;
+  padding: 0.8em;
+}
+
+.main-nav a:hover {
+  color: #ddd;
+  background-color: #333;
+}
+
+.main-nav .active a {
+  color: #ddd;
+  background-color: #333;
+  cursor: default;
+}
+
+p {
+  margin: 1em 0 1em 0;
+}
+
+/*  =-=-=-=-=-=-=-=- END SERVICES PAGE =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 a {
   text-decoration: none;
@@ -110,6 +172,58 @@ footer p {
 .center {
   text-align: center;
   margin: auto;
+}
+
+/* =-=-=-=-=-=-=-= MODAL CONTACT =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.modal-mask {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-card {
+  position: relative;
+  text-align: center;
+  width: 24rem;
+  height: 15rem;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #e4e4e4;
+  border-radius: 6px;
+}
+
+.modal-contact {
+  margin: 0.5rem;
+}
+
+.bold {
+  font-family: cinzel;
+  font-weight: 700;
+}
+
+.modal-link {
+  color: #777;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: rotate(135deg);
 }
 
 /* MEDIA QUERY - SMALL SCREEN =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
