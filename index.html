@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Jerry L Hoover - Front End Developer</title>
   </head>
@@ -20,9 +16,15 @@
         <div>
           <div>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="index.html#portfolio">Portfolio</a></li>
-              <li><a href="index.html#about-me">About Me</a></li>
+              <li><a href="#" class="menu-home">Home</a></li>
+              <li>
+                <a href="index.html#portfolio" class="menu-portfolio"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="index.html#about-me" class="menu-about">About Me</a>
+              </li>
               <li>
                 <button class="contact">Contact</button>
               </li>
@@ -33,12 +35,12 @@
     </section>
 
     <!-- =-=-=-=-=-=-=-=-=-=-=-MARQUEE BACKGROUND =-=-=-=-=-=-=-=-=-=-=-= -->
-    <header class="background">
+    <header id="background">
       <div class="marquee">
-        <!-- <img src="img/face2.png" alt="Jerry L Hoover" class="logo" /> -->
+        <img src="img/jlh-logo.svg" alt="Jerry L Hoover" class="logo" />
         <div class="title">Jerry L Hoover - Web Developer</div>
         <div class="text">
-          I build web sites. What can I build for you?
+          Developer. Teacher. Creator.
         </div>
       </div>
     </header>
@@ -47,8 +49,8 @@
     <section class="link-bar">
       <div class="container link-items center">
         <div>
-          <a href="index.html#portfolio">
-            <i class="fas fa-desktop fa-3x"></i>
+          <a class="link-item" href="index.html#portfolio">
+            <img src="/img/portfolio.svg" alt="Portfolio" class="link-icon" />
             <h3>My Portfolio</h3>
           </a>
           <p>
@@ -57,8 +59,8 @@
         </div>
 
         <div>
-          <a href="index.html#about-me">
-            <i class="fas fa-code fa-3x"></i>
+          <a class="link-item" href="index.html#about-me">
+            <img src="/img/about.svg" alt="About Me" class="link-icon" />
             <h3>About Me</h3>
           </a>
           <p>
@@ -67,24 +69,27 @@
         </div>
 
         <div>
-          <button class="contact">
-            <i class="fas fa-address-book fa-3x contact-icon"></i>
-            <h3>Contact Me</h3>
+          <button class="contact link-item">
+            <img src="/img/contact.svg" alt="Contact Me" class="link-icon" />
+            <span class="contact-h3 ">Contact Me</span>
           </button>
           <p>
-            Want to learn more about how I can help you? I'm just an email away!
+            Questions? Reach out!
           </p>
         </div>
       </div>
     </section>
 
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-= PORTFOLIO =-=-=-=-=-=-=-=-=-=-=-=-= -->
-    <section class="portfolio-container bg-light" id="portfolio">
+    <section class="portfolio-container" id="portfolio">
       <div class="box">
         <div class="project-title">
           Project 1 - Personal Profile
           <p class="project-subtitle">HTML</p>
-          <a href="projects/treehouse-project-1/" target="_blank" class="button"
+          <a
+            href="/projects/treehouse-project-1/"
+            target="_blank"
+            class="button"
             >view site</a
           >
           <a
@@ -104,10 +109,7 @@
         <div class="project-title">
           Project 2 - Mobile First
           <p class="project-subtitle">HTML & CSS Flexbox</p>
-          <a
-            href="projects/treehouse-project-2"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-2" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -127,10 +129,7 @@
         <div class="project-title">
           Project 3 - Mobile Form
           <p class="project-subtitle">HTML CSS</p>
-          <a
-            href="projects/treehouse-project-3"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-3" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -150,10 +149,7 @@
         <div class="project-title">
           Project 4 - Style Guide
           <p class="project-subtitle">HTML CSS/SASS</p>
-          <a
-            href="projects/treehouse-project-4"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-4" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -173,10 +169,7 @@
         <div class="project-title">
           Project 5 - Live Search
           <p class="project-subtitle">CSS Grid & Javascript</p>
-          <a
-            href="projects/treehouse-project-5"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-5" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -196,10 +189,7 @@
         <div class="project-title">
           Project 6 - Word Game
           <p class="project-subtitle">CSS & Javascript</p>
-          <a
-            href="projects/treehouse-project-6"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-6" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -219,10 +209,7 @@
         <div class="project-title">
           Project 7 - Dashboard
           <p class="project-subtitle">CSS Grid & Javascript</p>
-          <a
-            href="projects/treehouse-project-7"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-7" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -242,10 +229,7 @@
         <div class="project-title">
           Project 8 - Directory
           <p class="project-subtitle">Promises & Callbacks</p>
-          <a
-            href="projects/treehouse-project-8"
-            target="_blank"
-            class="button"
+          <a href="projects/treehouse-project-8" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -283,10 +267,7 @@
         <div class="project-title">
           Project 10 - Rnd Facts
           <p class="project-subtitle">Javascript</p>
-          <a
-            href="projects/hoo-project-10"
-            target="_blank"
-            class="button"
+          <a href="projects/hoo-project-10" target="_blank" class="button"
             >view site</a
           >
           <a
@@ -335,22 +316,24 @@
         </div>
       </div>
     </section>
-    <!-- End Portfolio Container --- Paste projects above this line -->
+    <!-- End Portfolio Container -+- Paste projects above this line -->
 
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-= ABOUT ME =-=-=-=-=-=-=-=-=-=-=-=-= -->
     <section class="container about bg-dark" id="about-me">
       <div class="link-about">
         <div class="center">
-          <i class="fas fa-laptop-code fa-10x"></i>
+          <img src="/img/about.svg" alt="About Me" class="about-icon" />
         </div>
         <div>
           <h3 id="about">About Me</h3>
-          <p>
+          <p class="about-text">
             I build eye-catching and functional websites. I have a passion for
             teaching and creating things that both work and inspire. This is the
             focus I will bring to your website -- a love of elegant design using
-            the latest tech.
+            the latest tech.<br /><br />
           </p>
+          <!-- ******  RESUME PDF GOES HERE -->
+          <a href="hoover-resume.pdf" class="btn-resume" download>Résumé</a>
         </div>
       </div>
     </section>
@@ -370,6 +353,7 @@
           <li>Node.js</li>
           <li>Ajax</li>
           <li>Git</li>
+          <li>Gimp</li>
           <li>VS Code and Sublime</li>
           <li>Team Treehouse Front End TechDegree (In Progress...)</li>
         </ul>
@@ -442,6 +426,7 @@
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=-=-=-=-=-=-= -->
     <footer class="center bg-dark">
       <p>&copy; 2019 Jerry L Hoover</p>
+      <a href="#" class="back-to-top">&#8593;</a>
     </footer>
     <script src="js/app.js"></script>
   </body>

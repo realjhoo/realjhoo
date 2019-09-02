@@ -1,6 +1,14 @@
 /* style.css for portfolio project */
 @import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat:400,700");
 
+/* =-=-=-=-=-=-=-=-=-=-= VARIABLES =-=-=-=-=-=-=-= */
+:root {
+  --main-color: #4e6e7d;
+  --text-color: #ce9e62;
+  --menu-bg-color: rgba(78, 110, 125, 0.6);
+  --project-mask: rgba(78, 110, 125, 0.4);
+}
+
 /* =-=-=-=-=-=-=-=-=-=-= GENERAL RULES =-=-=-=-=-= */
 * {
   box-sizing: border-box;
@@ -13,10 +21,11 @@ html {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--main-color);
   line-height: 1.2;
-  color: #fff;
+  color: var(--text-color);
   font-family: Montserrat;
+  overflow-x: hidden;
 }
 
 button:active,
@@ -56,7 +65,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  background-color: rgba(51, 51, 51, 0.6);
+  background-color: var(--menu-bg-color);
   padding: 1rem;
   width: 60px;
   height: 60px;
@@ -69,7 +78,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  background-color: #fff;
+  background-color: var(--text-color);
   width: 100%;
   height: 2px;
 }
@@ -140,7 +149,7 @@ button:focus {
   transform: scale(0);
   transition: all 0.4s ease;
   border-radius: 50%;
-  background-color: rgba(24, 39, 51, 0.85);
+  background-color: var(--menu-bg-color);
   width: 200vw;
   height: 200vh;
 }
@@ -156,8 +165,10 @@ button:focus {
 .menu-wrap .menu > div > div > ul > li {
   padding: 1rem;
   list-style: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.5rem;
+  text-shadow: 2px 2px #000;
+  transition: transition 1s ease-in-out;
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
@@ -168,31 +179,59 @@ button:focus {
 
 .menu-wrap .menu > div > div > ul > li > button {
   border: none;
-  background-color: rgba(24, 39, 51, 0);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.5rem;
+  font-family: Montserrat;
+  text-shadow: 2px 2px #000;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* =-=-=-=-=-=-=-= BLUR RULES =-=-=-=-=-=-=-=-=-=-=-= */
-.background::after {
-  filter: blur(5px);
+.menu-wrap .menu > div > div > ul > li:hover,
+.menu-wrap .menu > div > div > ul > li > a:hover,
+.menu-wrap .menu > div > div > ul > li > button:hover {
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+/* =-=-=-=-=-=-=-= MARQUEE & BACKGROUND RULES =-=-=-=-=-=-=-=-=-= */
+
+.background0::after,
+.background1::after,
+.background2::after {
+  filter: blur(4px);
   display: block;
-  transition: all 1s;
-  background-image: url("../img/halfhat-realjhoo.png");
+  transition: all 0.8s;
   background-position: -50px 0;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 104%;
   height: 100vh;
   content: "";
 }
 
-.background:hover::after {
+.background0::after {
+  background-image: url("../img/halfhat2.png");
+}
+
+.background1::after {
+  background-image: url("../img/the-thinker.png");
+}
+
+.background2::after {
+  background-image: url("../img/shades-and-code.png");
+}
+
+.background0:hover::after,
+.background1:hover::after,
+.background2:hover::after {
   filter: blur(0);
 }
 
-.background:hover .marquee {
+.background0:hover .marquee,
+.background1:hover .marquee,
+.background2:hover .marquee {
   filter: blur(1px);
 }
 
@@ -206,11 +245,13 @@ button:focus {
   width: 300px;
   height: 350px;
   text-align: center;
+  text-shadow: 2px 2px #000;
 }
 
 .marquee .logo {
-  width: 180px;
-  height: 180px;
+  width: 75px;
+  height: 75px;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 
 .marquee .title {
@@ -224,36 +265,6 @@ button:focus {
 }
 
 /* =-=-=-=-=-=-=-=-=-=-= LINK BAR RULES =-=-=-=-=-=-=-=-=-= */
-.link-bar h3,
-.experience h3 {
-  padding-top: 12px;
-  font-family: cinzel;
-  font-weight: 700;
-}
-
-button > h3 {
-  color: #f4f4f4;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.link-bar a {
-  text-decoration: none;
-  color: #f4f4f4;
-}
-
-.link-bar button {
-  outline: none;
-  border: none;
-  background-color: #333;
-  cursor: pointer;
-  color: #f4f4f4;
-}
-
-.contact-icon {
-  font-size: 3rem;
-}
-
 .container {
   margin: auto;
   padding: 4rem 1rem;
@@ -261,9 +272,45 @@ button > h3 {
   overflow: hidden;
 }
 
-.fas:hover {
+.link-bar h3,
+.experience h3 {
+  padding-top: 12px;
+  font-family: cinzel;
+  font-weight: 700;
+}
+
+/* button > h3 {
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  font-weight: 700;
+} */
+
+.link-bar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link-bar button {
+  outline: none;
+  border: none;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* .contact-icon {
+  font-size: 3rem;
+} */
+
+.link-icon {
+  width: 5rem;
+}
+
+.link-icon:hover ~ h3,
+.link-item:hover,
+.link-bar h3:hover {
   transition: all 0.5s;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .link-items {
@@ -273,13 +320,21 @@ button > h3 {
 }
 
 .bg-dark {
-  background-color: #333;
-  color: #f4f4f4;
+  background-color: var(--main-color);
+  color: var(--text-color);
 }
 
 .bg-light {
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--text-color);
+  color: var(--main-color);
+}
+
+.contact-h3 {
+  font-family: cinzel;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-top: 12px;
 }
 
 /* =-=-=-=-=-=-=-= PORTFOLIO RULES =-=-=-=-=-=-=-=-=-= */
@@ -297,7 +352,7 @@ button > h3 {
 .box {
   position: relative;
   border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  box-shadow: 1px 1px 1px 1px #000;
   overflow: hidden;
 }
 
@@ -331,12 +386,13 @@ button > h3 {
   transition: opacity 0.5s;
   opacity: 0;
   z-index: 1;
-  background-color: rgba(90, 0, 10, 0.4);
+  background-color: var(--project-mask);
   /* this must match height & width from img selector */
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
+  text-shadow: 2px 2px #000;
   font-size: 1.5rem;
 }
 
@@ -354,18 +410,18 @@ button > h3 {
 .button {
   margin: 5px;
   border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  background-color: rgba(47, 116, 155, 0.7);
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.6);
+  background-color: var(--text-color);
   padding: 5px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #f4f4f4;
   font-size: 0.7rem;
 }
 
 .button:hover {
   transition: all 0.4s;
-  background-color: rgba(47, 116, 155, 1);
+  background-color: var(--main-color);
 }
 
 .grade {
@@ -377,6 +433,25 @@ button > h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+}
+
+.about-icon {
+  width: 9rem;
+}
+
+.btn-resume {
+  color: var(--main-color);
+  padding: 0.8rem;
+  background-color: var(--text-color);
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: Montserrat;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-resume:hover {
+  opacity: 0.5;
 }
 
 /* =-=-=-=-=-=-=-=-= EXPERIENCE RULES =-=-=-=-=-=-=-=-= */
@@ -457,9 +532,28 @@ footer {
   padding: 2.2rem;
 }
 
+.back-to-top {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0.7rem;
+  right: 1.1rem;
+  font-size: 4rem;
+  color: var(--text-color);
+  background-color: var(--menu-bg-color);
+  z-index: 2;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0 8px;
+  text-shadow: 2px 2px #000;
+}
+
 /*  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-= */
+/* tablets */
 @media (max-width: 768px) {
-  .background::after {
+  .background0::after,
+  .background1::after,
+  .background2::after {
     height: 50vh;
   }
 
@@ -469,10 +563,10 @@ footer {
     margin-top: 5px;
   }
 
-  /* .marquee .logo {
+  .marquee .logo {
     height: 140px;
     width: 140px;
-  } */
+  }
 
   .marquee .text {
     display: none;
@@ -488,13 +582,50 @@ footer {
   }
 
   .container > div {
-    border-bottom: #f4f4f4 dashed 1px;
+    border-bottom: var(--text-color) dashed 1px;
     padding: 1.2rem 1rem;
   }
 }
 
+/* phones */
+@media (max-width: 420px) {
+  .marquee .title {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .container {
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .grade {
+    font-size: 1rem;
+  }
+
+  .modal-card {
+    width: 20rem;
+  }
+}
+
+/*  landscape */
 @media (max-height: 500px) {
-  .marquee .title,
+  .background0::after,
+  .background1::after,
+  .background2::after {
+    height: 75vh;
+    width: 100%;
+  }
+
+  .marquee .title {
+    font-size: 1.1rem;
+  }
+
   .marquee .text {
     display: none;
   }

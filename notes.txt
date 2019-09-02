@@ -1,0 +1,22 @@
+
+IDEA:
+
+Combine the following pages
+
+1. Hamburger Menu Project
+2. RealJHoo blur background
+3. Portfolio
+4. About (halfhat pic in bg with overlay)
+  About section includes Langs and Techs
+  HTML, CSS, JS, etc...
+5. Contact (as popup)
+6. Contact socials can be in footer
+
+
+
+Needsw at least 2 javascript functions for exceeds
+IDEAS:
+add a button to project that pops up an description of what was involved
+replace current buttons with javascript buttons
+
+HTML, CSS & JS Validate
