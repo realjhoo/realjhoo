@@ -6,7 +6,9 @@
   --main-color: #4e6e7d;
   --text-color: #ce9e62;
   --menu-bg-color: rgba(78, 110, 125, 0.6);
-  --project-mask: rgba(78, 110, 125, 0.4);
+  --project-mask: rgba(78, 110, 125, 0.5);
+  --text-font: Montserrat;
+  --title-font: Cinzel;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-= GENERAL RULES =-=-=-=-=-= */
@@ -24,7 +26,7 @@ body {
   background-color: var(--main-color);
   line-height: 1.2;
   color: var(--text-color);
-  font-family: Montserrat;
+  font-family: var(--text-font);
   overflow-x: hidden;
 }
 
@@ -183,7 +185,7 @@ button:focus {
   cursor: pointer;
   color: var(--text-color);
   font-size: 1.5rem;
-  font-family: Montserrat;
+  font-family: var(--text-font);
   text-shadow: 2px 2px #000;
   transition: transform 0.5s ease-in-out;
 }
@@ -196,37 +198,40 @@ button:focus {
 }
 
 /* =-=-=-=-=-=-=-= MARQUEE & BACKGROUND RULES =-=-=-=-=-=-=-=-=-= */
-
 .background0::after,
 .background1::after,
 .background2::after {
   filter: blur(4px);
   display: block;
-  transition: all 0.8s;
+  transition: all 0.5s ease-in-out;
   background-position: -50px 0;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 104%;
+  width: 100%;
   height: 100vh;
   content: "";
 }
 
+/* .background 0, 1 and 2 allow alternate bg images on reload with JS */
 .background0::after {
-  background-image: url("../img/halfhat2.png");
+  background-image: url("../img/jlh-marquee.png");
 }
 
 .background1::after {
-  background-image: url("../img/the-thinker.png");
+  background-image: url("../img/jlh-marquee.png");
 }
 
 .background2::after {
-  background-image: url("../img/shades-and-code.png");
+  background-image: url("../img/jlh-marquee.png");
 }
 
 .background0:hover::after,
 .background1:hover::after,
 .background2:hover::after {
   filter: blur(0);
+  background-image: url("../img/jlh-marquee-color.png");
+  margin-top: 1.1rem;
+  margin-left: 4px;
 }
 
 .background0:hover .marquee,
@@ -240,7 +245,7 @@ button:focus {
   top: 15%;
   left: 75%;
   z-index: 1;
-  margin-top: 105px;
+  margin-top: 200px;
   margin-left: -145px;
   width: 300px;
   height: 350px;
@@ -264,6 +269,17 @@ button:focus {
   line-height: 1.7rem;
 }
 
+.motto {
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 45%;
+}
+
+.motto-text {
+  font-size: 1.1rem;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-= LINK BAR RULES =-=-=-=-=-=-=-=-=-= */
 .container {
   margin: auto;
@@ -273,17 +289,11 @@ button:focus {
 }
 
 .link-bar h3,
-.experience h3 {
+.skills h3 {
   padding-top: 12px;
-  font-family: cinzel;
+  font-family: var(--title-font);
   font-weight: 700;
 }
-
-/* button > h3 {
-  color: #f4f4f4;
-  font-size: 1.2rem;
-  font-weight: 700;
-} */
 
 .link-bar a {
   text-decoration: none;
@@ -297,10 +307,6 @@ button:focus {
   cursor: pointer;
   color: var(--text-color);
 }
-
-/* .contact-icon {
-  font-size: 3rem;
-} */
 
 .link-icon {
   width: 5rem;
@@ -330,7 +336,7 @@ button:focus {
 }
 
 .contact-h3 {
-  font-family: cinzel;
+  font-family: var(--title-font);
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
@@ -338,15 +344,20 @@ button:focus {
 }
 
 /* =-=-=-=-=-=-=-= PORTFOLIO RULES =-=-=-=-=-=-=-=-=-= */
+.portfolio-header {
+  padding: 1rem;
+  font-family: var(--title-font);
+  font-size: 2rem;
+}
+
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
   justify-content: center;
   margin-right: 1rem;
   margin-left: 1rem;
   border-radius: 6px;
-  padding: 12px;
 }
 
 .box {
@@ -356,9 +367,11 @@ button:focus {
   overflow: hidden;
 }
 
-.box img {
+.box img,
+.project-image {
   width: 100%;
-  height: 100%;
+  height: 290px;
+  line-height: 0;
 }
 
 .box:hover .project-title {
@@ -367,14 +380,11 @@ button:focus {
 
 .box:hover .project-image img {
   filter: blur(2px);
-}
-
-.project-image {
-  height: 300px;
-  line-height: 0;
+  transform: scale(1.5);
 }
 
 .project-title {
+  /*  this is the overlay and its contents */
   font-weight: 700;
   display: flex;
   position: absolute;
@@ -387,7 +397,6 @@ button:focus {
   opacity: 0;
   z-index: 1;
   background-color: var(--project-mask);
-  /* this must match height & width from img selector */
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -397,14 +406,20 @@ button:focus {
 }
 
 .project-subtitle {
-  margin-bottom: 0.7rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-description {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .project-image img {
   filter: blur(0px);
-  transform: scale(1.1);
-  transition: filter 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .button {
@@ -424,11 +439,12 @@ button:focus {
   background-color: var(--main-color);
 }
 
-.grade {
-  font-size: 0.5rem;
+/*  =-=-=-=-=-=-=-= ABOUT ME RULES =-=-=-=-=-=-=-=-=-= */
+.about-header {
+  font-family: var(--title-font);
+  padding-bottom: 8px;
 }
 
-/*  =-=-=-=-=-=-=-= ABOUT ME RULES =-=-=-=-=-=-=-=-=-= */
 .link-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -436,16 +452,25 @@ button:focus {
 }
 
 .about-icon {
-  width: 9rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.about-text {
+  font-size: 1.1rem;
 }
 
 .btn-resume {
+  display: block;
+  width: 5.9rem;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--main-color);
   padding: 0.8rem;
   background-color: var(--text-color);
   border-radius: 6px;
   font-weight: 700;
-  font-family: Montserrat;
+  font-family: var(--text-font);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -454,9 +479,43 @@ button:focus {
   opacity: 0.5;
 }
 
-/* =-=-=-=-=-=-=-=-= EXPERIENCE RULES =-=-=-=-=-=-=-=-= */
-.experience {
+/* =-=-=-=-=-=-=-=-= SKILLS RULES =-=-=-=-=-=-=-=-= */
+.skills {
   padding: 12px;
+}
+
+.skills h3 {
+  font-family: var(--title-font);
+}
+
+.skills-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill-icon {
+  width: 6rem;
+  padding: 1rem;
+}
+
+.node-icon {
+  width: 5.5rem;
+}
+.skill-icon:hover ~ .skill-text,
+.skill-text:hover,
+.skills-bar > span:hover {
+  opacity: 1;
+}
+
+.skill-text {
+  justify-content: center;
+  text-align: center;
+  color: var(--main-color);
+  opacity: 0;
+  transition: opacity 0.4s;
+  cursor: default;
 }
 
 /* =-=-=-=-=-=-=-= MODAL CARD RULES =-=-=-=-=-=-=-=-=-= */
@@ -490,7 +549,7 @@ button:focus {
 
 .modal-contact {
   margin: 0.5rem;
-  font-family: cinzel;
+  font-family: var(--title-font);
 }
 
 .modal-link {
@@ -523,7 +582,7 @@ button:focus {
   margin: 0 0.6rem 0 0.6rem;
   text-decoration: none;
   color: #333;
-  font-family: cinzel;
+  font-family: var(--title-font);
   font-weight: 700;
 }
 
@@ -555,17 +614,18 @@ footer {
   .background1::after,
   .background2::after {
     height: 50vh;
+    width: 115%;
   }
 
   .marquee {
-    top: 5%;
+    top: 22%;
     left: 50%;
     margin-top: 5px;
   }
 
   .marquee .logo {
-    height: 140px;
-    width: 140px;
+    height: 90px;
+    width: 90px;
   }
 
   .marquee .text {
@@ -579,6 +639,10 @@ footer {
   .link-items,
   .link-about {
     grid-template-columns: 1fr;
+  }
+
+  .motto-text {
+    opacity: 0;
   }
 
   .container > div {
@@ -604,12 +668,18 @@ footer {
     padding: 1rem;
   }
 
-  .grade {
+  .project-description {
     font-size: 1rem;
   }
 
   .modal-card {
     width: 20rem;
+  }
+
+  .back-to-top {
+    bottom: 0.5rem;
+    right: 4rem;
+    font-size: 2.5rem;
   }
 }
 
