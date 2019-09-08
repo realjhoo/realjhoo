@@ -14,22 +14,20 @@
       <div class="hamburger"><div></div></div>
       <div class="menu">
         <div>
-          <div>
-            <ul>
-              <li><a href="#" class="menu-home">Home</a></li>
-              <li>
-                <a href="index.html#portfolio" class="menu-portfolio"
-                  >Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="index.html#about-me" class="menu-about">About Me</a>
-              </li>
-              <li>
-                <button class="contact">Contact</button>
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li><a href="#" class="menu-home">Home</a></li>
+            <li>
+              <a href="index.html#portfolio" class="menu-portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="index.html#about-me" class="menu-about">About Me</a>
+            </li>
+            <li>
+              <button class="contact">Contact</button>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -188,7 +186,7 @@
       <!-- ************************************************************************ -->
       <div class="box">
         <div class="project-title">
-          Hangman Style Word Game
+          Javascript Word Game
           <p class="project-subtitle">CSS Javascript</p>
           <a href="projects/treehouse-project-6" target="_blank" class="button"
             >view site</a
@@ -200,7 +198,7 @@
             >view source</a
           >
           <p class="project-description">
-            A web game created using CSS and Javascript
+            A hangman style word game created using CSS and Javascript
           </p>
         </div>
         <div class="project-image">
@@ -210,7 +208,7 @@
       <!-- ************************************************************************ -->
       <div class="box">
         <div class="project-title">
-          Live Search Photo Gallery
+          Photo Gallery
           <p class="project-subtitle">HTML CSS JQuery</p>
           <a href="projects/treehouse-project-5" target="_blank" class="button"
             >view site</a
@@ -222,7 +220,7 @@
             >view source</a
           >
           <p class="project-description">
-            An interactive photo gallery, with live search, using JQuery and
+            An interactive live search photo gallery built using JQuery and
             Javascript
           </p>
         </div>
@@ -245,8 +243,8 @@
             >view source</a
           >
           <p class="project-description">
-            A Sass style guide project using partials, variables, extends and
-            mixins.
+            A web style guide built with SASS, using partials, variables,
+            extends and mixins.
           </p>
         </div>
         <div class="project-image">
@@ -283,18 +281,15 @@
     <section class="container about bg-dark" id="about-me">
       <div class="link-about">
         <div class="center">
-          <!-- <img src="/img/about.svg" alt="About Me" class="about-icon" /> -->
-          <img src="/img/about.png" alt="About Me" class="about-icon" />
+          <img src="img/about.png" alt="About Me" class="about-icon" />
         </div>
         <div>
           <h3 id="about" class="about-header">About Me</h3>
           <p class="about-text">
-            HTML. CSS. JavaScript. Gimp. Git. Coding. Teaching and learning.
-            Creating cool things and ideas in an atmosphere that helps others to
-            do their best. Excellent critical thinker and logical analyst, good
-            communicator and fine writer and editor. I love learning: I taught
-            myself coding, as well as Esperanto and Toki Pona. Also, I grill
-            really good steaks.<br /><br />
+            Hi! I enjoy learning, teaching and creating cool things in an
+            atmosphere that helps others to do their best. Excellent critical
+            thinker and logical analyst, good communicator and fine writer and
+            editor. I love learning. Also, I grill really good steaks.<br /><br />
           </p>
           <!-- ******  RESUME PDF GOES HERE -->
           <a href="hoover-resume.pdf" class="btn-resume" download>Résumé</a>
@@ -311,42 +306,45 @@
 
         <span class="skills-bar">
           <span>
-            <img src="/svg/html.svg" alt="" class="skill-icon" />
+            <img src="svg/html.svg" alt="" class="skill-icon" />
             <p class="skill-text">HTML</p>
           </span>
 
           <span>
-            <img src="/svg/css.svg" alt="" class="skill-icon" />
+            <img src="svg/css.svg" alt="" class="skill-icon" />
             <p class="skill-text">CSS</p>
           </span>
 
-          <span
-            ><img src="/svg/sass.svg" alt="" class="skill-icon" />
+          <span>
+            <img src="svg/sass.svg" alt="" class="skill-icon" />
             <p class="skill-text">SASS</p>
           </span>
 
           <span>
-            <img src="/svg/node.svg" alt="" class="skill-icon node-icon" />
-            <p class="skill-text">Node.js</p>
+            <img src="svg/node.svg" alt="" class="skill-icon node-icon" />
+            <p class="skill-text">
+              JavaScript &amp; <br />
+              Node.js
+            </p>
           </span>
 
           <span>
-            <img src="/svg/git.svg" alt="" class="skill-icon" />
+            <img src="svg/git.svg" alt="" class="skill-icon" />
             <p class="skill-text">Git</p>
           </span>
 
           <span>
-            <img src="/svg/gimp.svg" alt="" class="skill-icon" />
+            <img src="svg/gimp.svg" alt="" class="skill-icon" />
+            <p class="skill-text">Gimp</p>
+          </span>
 
-            <p class="skill-text">Gimp</p></span
-          >
           <span>
-            <img src="/svg/json.svg" alt="" class="skill-icon" />
+            <img src="svg/json.svg" alt="" class="skill-icon" />
             <p class="skill-text">JSON</p>
           </span>
 
           <span>
-            <img src="/svg/treehouse.svg" alt="" class="skill-icon" />
+            <img src="svg/treehouse.svg" alt="" class="skill-icon" />
             <p class="skill-text">
               Treehouse <br />
               TechDegree
@@ -421,9 +419,17 @@
 
     <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=-=-=-=-=-=-= -->
     <footer class="center bg-dark">
-      <p>&copy; 2019 Jerry L Hoover</p>
+      <p>
+        &copy;
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>
+        Jerry L Hoover
+      </p>
       <a href="#" class="back-to-top">&#8593;</a>
     </footer>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

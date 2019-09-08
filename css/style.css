@@ -1,4 +1,4 @@
-/* style.css for portfolio project */
+/* style.css for realjhoo */
 @import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat:400,700");
 
 /* =-=-=-=-=-=-=-=-=-=-= VARIABLES =-=-=-=-=-=-=-= */
@@ -16,10 +16,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
   scroll-behavior: smooth;
+  --scroll-behavior: smooth;
 }
 
 body {
@@ -125,11 +123,6 @@ button:focus {
   transition-duration: 0.75s;
 }
 
-.menu-wrap .toggle:checked ~ .menu > div > div {
-  transition: opacity 0.4s ease;
-  opacity: 1;
-}
-
 .menu-wrap .menu {
   display: flex;
   position: fixed;
@@ -164,7 +157,7 @@ button:focus {
   text-align: center;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.menu-wrap .menu > div > ul > li {
   padding: 1rem;
   list-style: none;
   color: var(--text-color);
@@ -173,13 +166,13 @@ button:focus {
   transition: transition 1s ease-in-out;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.menu-wrap .menu > div > ul > li > a {
   transition: color 0.4s ease;
   text-decoration: none;
   color: inherit;
 }
 
-.menu-wrap .menu > div > div > ul > li > button {
+.menu-wrap .menu > div > ul > li > button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -190,9 +183,9 @@ button:focus {
   transition: transform 0.5s ease-in-out;
 }
 
-.menu-wrap .menu > div > div > ul > li:hover,
-.menu-wrap .menu > div > div > ul > li > a:hover,
-.menu-wrap .menu > div > div > ul > li > button:hover {
+.menu-wrap .menu > div > ul > li:hover,
+.menu-wrap .menu > div > ul > li > a:hover,
+.menu-wrap .menu > div > ul > li > button:hover {
   transition: all 0.5s;
   opacity: 0.6;
 }
@@ -201,9 +194,9 @@ button:focus {
 .background0::after,
 .background1::after,
 .background2::after {
-  filter: blur(4px);
+  filter: blur(7px);
   display: block;
-  transition: all 0.5s ease-in-out;
+  transition: filter 0.8s;
   background-position: -50px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -228,16 +221,17 @@ button:focus {
 .background0:hover::after,
 .background1:hover::after,
 .background2:hover::after {
+  margin-top: 2rem;
+  margin-left: 12px;
   filter: blur(0);
+
   background-image: url("../img/jlh-marquee-color.png");
-  margin-top: 1.1rem;
-  margin-left: 4px;
 }
 
 .background0:hover .marquee,
 .background1:hover .marquee,
 .background2:hover .marquee {
-  filter: blur(1px);
+  filter: blur(2px);
 }
 
 .marquee {
@@ -615,6 +609,8 @@ footer {
   .background2::after {
     height: 50vh;
     width: 115%;
+    margin-left: 12px;
+    margin-top: 1.1rem;
   }
 
   .marquee {
