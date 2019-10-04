@@ -454,6 +454,11 @@ button:focus {
   font-size: 1.1rem;
 }
 
+.techdegree {
+  text-decoration: none;
+  color: lightgreen;
+}
+
 .btn-resume {
   display: block;
   width: 5.9rem;
