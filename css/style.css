@@ -682,6 +682,37 @@ footer {
     right: 4rem;
     font-size: 2.5rem;
   }
+
+  .background0::after,
+  .background1::after,
+  .background2::after {
+    filter: blur(2px);
+  }
+
+  .background0:hover::after,
+  .background1:hover::after,
+  .background2:hover::after {
+    filter: blur(2px);
+
+    background-image: url("../img/jlh-marquee.png");
+  }
+  .background0::after {
+    background-image: url("../img/jlh-marquee.png");
+  }
+
+  .background1::after {
+    background-image: url("../img/jlh-marquee.png");
+  }
+
+  .background2::after {
+    background-image: url("../img/jlh-marquee.png");
+  }
+
+  .background0:hover .marquee,
+  .background1:hover .marquee,
+  .background2:hover .marquee {
+    filter: blur(0px);
+  }
 }
 
 /*  landscape */
