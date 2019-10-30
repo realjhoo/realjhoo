@@ -478,6 +478,11 @@ button:focus {
   opacity: 0.5;
 }
 
+.special {
+  cursor: pointer;
+  color: lightgreen;
+}
+
 /* =-=-=-=-=-=-=-=-= SKILLS RULES =-=-=-=-=-=-=-=-= */
 .skills {
   padding: 12px;
