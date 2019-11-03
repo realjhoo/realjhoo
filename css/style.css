@@ -191,55 +191,38 @@ button:focus {
 }
 
 /* =-=-=-=-=-=-=-= MARQUEE & BACKGROUND RULES =-=-=-=-=-=-=-=-=-= */
-.background0::after,
-.background1::after,
-.background2::after {
+
+#background {
   filter: blur(7px);
   display: block;
-  transition: filter 0.8s;
-  background-position: -50px 0;
+  transition: filter 0.6s;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 70vh;
-  content: "";
-}
-
-/* .background 0, 1 and 2 allow alternate bg images on reload with JS */
-.background0::after {
-  background-image: url("../img/jlh-marquee.png");
-}
-
-.background1::after {
-  background-image: url("../img/jlh-marquee.png");
-}
-
-.background2::after {
-  background-image: url("../img/jlh-marquee.png");
-}
-
-.background0:hover::after,
-.background1:hover::after,
-.background2:hover::after {
-  margin-top: 2rem;
-  margin-left: 12px;
-  filter: blur(0);
-
+  height: 100vh;
   background-image: url("../img/jlh-marquee-color.png");
+  opacity: 0.5;
 }
 
-.background0:hover .marquee,
-.background1:hover .marquee,
-.background2:hover .marquee {
-  filter: blur(2px);
+#background:hover {
+  filter: blur(0);
+}
+
+#background .marquee {
+  filter: blur(0);
+  transition: filter 0.4s;
+}
+
+#background:hover .marquee {
+  filter: blur(0px);
 }
 
 .marquee {
   position: absolute;
-  top: 10%;
-  left: 70%;
+  top: 15%;
+  left: 75%;
   z-index: 1;
-  margin-top: 25px;
+  margin-top: 225px;
   margin-left: -145px;
   width: 300px;
   height: 350px;
@@ -614,13 +597,9 @@ footer {
 /*  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-= */
 /* tablets */
 @media (max-width: 768px) {
-  .background0::after,
-  .background1::after,
-  .background2::after {
+  #background {
     height: 50vh;
-    width: 115%;
-    margin-left: 12px;
-    margin-top: 1.1rem;
+    width: 100%;
   }
 
   .marquee {
@@ -688,43 +667,22 @@ footer {
     font-size: 2.5rem;
   }
 
-  .background0::after,
-  .background1::after,
-  .background2::after {
+  #background {
     filter: blur(2px);
   }
 
-  .background0:hover::after,
-  .background1:hover::after,
-  .background2:hover::after {
+  #background:hover {
     filter: blur(2px);
-
-    background-image: url("../img/jlh-marquee.png");
-  }
-  .background0::after {
-    background-image: url("../img/jlh-marquee.png");
   }
 
-  .background1::after {
-    background-image: url("../img/jlh-marquee.png");
-  }
-
-  .background2::after {
-    background-image: url("../img/jlh-marquee.png");
-  }
-
-  .background0:hover .marquee,
-  .background1:hover .marquee,
-  .background2:hover .marquee {
+  #background:hover .marquee {
     filter: blur(0px);
   }
 }
 
 /*  landscape */
 @media (max-height: 500px) {
-  .background0::after,
-  .background1::after,
-  .background2::after {
+  #background {
     height: 75vh;
     width: 100%;
   }

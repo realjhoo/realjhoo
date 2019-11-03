@@ -53,12 +53,22 @@ function back_to_top() {
   });
 }
 
+function parallax_effect() {
+  const parallax = document.getElementById("background");
+
+  window.addEventListener("scroll", function() {
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = offset * 0.5 + "px";
+  });
+}
+
 function main() {
   random_background();
   hamburger_listener();
   close_btn_listener();
   contact_listener();
   back_to_top();
+  parallax_effect();
 }
 
 main();
