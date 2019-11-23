@@ -2,6 +2,40 @@
 // All rights reserved
 // javascript for realjhoo
 
+// ========================================================
+function createBox() {
+  const portfolioContainer = document.querySelector(".portfolio-container");
+  let finalBoxMarkup = "";
+
+  for (let i = 0; i < projects.length; i++) {
+    title = projects[i].title;
+    subtitle = projects[i].subtitle;
+    site = projects[i].site;
+    git = projects[i].git;
+    description = projects[i].description;
+    thumbnail = projects[i].thumbnail;
+    altThumbnail = projects[i].altThumbnail;
+
+    const boxMarkup = `
+    <div class="box">
+      <div class="project-title">${title}
+        <p class="project-subtitle">${subtitle}</p>
+        <a href="${site}" target="_blank" class="button">view site</a>
+        <a href="${git}" target="_blank" class="button">view source</a>
+        <p class="project-description">${description}</p>
+      </div>
+
+      <div class="project-image">
+        <img src="${thumbnail}" alt="${altThumbnail}"/>
+      </div>
+    </div>`;
+
+    finalBoxMarkup += boxMarkup;
+  }
+  portfolioContainer.insertAdjacentHTML("beforeend", finalBoxMarkup);
+}
+
+// ========================================================
 function hamburger_listener() {
   document.addEventListener("click", event => {
     menu_home = document.querySelector(".menu-home");
@@ -18,6 +52,7 @@ function hamburger_listener() {
   });
 }
 
+// ========================================================
 function close_btn_listener() {
   let close = document.getElementById("close-btn");
   close.addEventListener("click", function() {
@@ -25,6 +60,7 @@ function close_btn_listener() {
   });
 }
 
+// ========================================================
 function contact_listener() {
   let contact = document.querySelectorAll(".contact");
   for (let i = 0; i < contact.length; i++) {
@@ -35,13 +71,7 @@ function contact_listener() {
   }
 }
 
-function random_background() {
-  // FUNCTION CHANGES MARQEE BACKGROUND
-  let random = Math.floor(Math.random() * 3) + 0;
-  let bg = "background" + random;
-  document.getElementById("background").className = bg;
-}
-
+// ========================================================
 function back_to_top() {
   document.addEventListener("scroll", function() {
     let y = window.pageYOffset;
@@ -53,6 +83,7 @@ function back_to_top() {
   });
 }
 
+// ========================================================
 function parallax_effect() {
   const parallax = document.getElementById("background");
 
@@ -62,8 +93,9 @@ function parallax_effect() {
   });
 }
 
+// ========================================================
 function main() {
-  random_background();
+  createBox();
   hamburger_listener();
   close_btn_listener();
   contact_listener();
@@ -71,4 +103,5 @@ function main() {
   parallax_effect();
 }
 
+// ========================================================
 main();
