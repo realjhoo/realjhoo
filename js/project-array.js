@@ -31,8 +31,8 @@ const projects = [
   {
     title: "API Employee Directory",
     subtitle: "CSS Fetch JSON Javascript",
-    site: "https://realjhoo.com/projects/threehouse-project-8",
-    git: "https://github.com/realjhoo/treehouse-project-8",
+    site: "https://realjhoo.com/projects/fs-project-8",
+    git: "https://github.com/realjhoo/fullstack-project-5",
     description: "Uses fetch to retrieve random users and allows live search",
     thumbnail: "img/project-8.png",
     altThumbnail: "Project 8 Thumbnail"
@@ -79,8 +79,8 @@ const projects = [
   {
     title: "Registration Form",
     subtitle: "HTML CSS Javascript",
-    site: "https://realjhoo.com/projects/treehouse-project-3",
-    git: "https://github.com/realjhoo/treehouse-project-3",
+    site: "https://realjhoo.com/projects/fullstack-project-3",
+    git: "https://github.com/realjhoo/fullstack-project-3",
     description: "An HTML5 form built using data validation.",
     thumbnail: "img/project-3.png",
     altThumbnail: "Project 3 Thumbnail"
