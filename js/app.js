@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Jerry L Hoover
+// Copyright (c) 2019 - 2020 Jerry L Hoover
 // All rights reserved
 // javascript for realjhoo
 
@@ -37,7 +37,7 @@ function createBox() {
 
 // ========================================================
 function hamburger_listener() {
-  document.addEventListener("click", event => {
+  document.addEventListener("click", (event) => {
     menu_home = document.querySelector(".menu-home");
     menu_portfolio = document.querySelector(".menu-portfolio");
     menu_about = document.querySelector(".menu-about");
@@ -55,7 +55,7 @@ function hamburger_listener() {
 // ========================================================
 function close_btn_listener() {
   let close = document.getElementById("close-btn");
-  close.addEventListener("click", function() {
+  close.addEventListener("click", function () {
     document.querySelector(".modal-mask").style.display = "none";
   });
 }
@@ -64,7 +64,7 @@ function close_btn_listener() {
 function contact_listener() {
   let contact = document.querySelectorAll(".contact");
   for (let i = 0; i < contact.length; i++) {
-    contact[i].addEventListener("click", function() {
+    contact[i].addEventListener("click", function () {
       document.querySelector(".toggle").checked = false;
       document.querySelector(".modal-mask").style.display = "flex";
     });
@@ -73,7 +73,7 @@ function contact_listener() {
 
 // ========================================================
 function back_to_top() {
-  document.addEventListener("scroll", function() {
+  document.addEventListener("scroll", function () {
     let y = window.pageYOffset;
     if (y > 450) {
       document.querySelector(".back-to-top").style.visibility = "visible";
@@ -87,7 +87,7 @@ function back_to_top() {
 function parallax_effect() {
   const parallax = document.getElementById("background");
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
     parallax.style.backgroundPositionY = offset * 0.5 + "px";
   });
