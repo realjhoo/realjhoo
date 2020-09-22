@@ -429,9 +429,18 @@ button:focus {
   grid-gap: 20px;
 }
 
-.about-icon {
-  width: 10rem;
+.about-icon-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #968569;
   border-radius: 50%;
+}
+
+.about-icon {
+  width: 170px;
+  margin-left: -32px;
 }
 
 .about-text {
