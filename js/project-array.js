@@ -1,11 +1,11 @@
 const projects = [
   {
-    title: "Toki Pona Sitelen",
+    title: "Toki Pona Practice",
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/toki-pona-sitelen/",
     git: "https://github.com/realjhoo/toki-pona",
     description:
-      "Using the linja-pona font, this app provides practice for identifying Toki Pona words and sitelen pona.",
+      "A prototype web app for a future React Native project that provides practice for those studying the constructed language, Toki Pona. This project uses the linja-pona font",
     thumbnail: "img/toki-pona.png",
     altThumbnail: "Toki Pona Practice Thumbnail",
   },
@@ -20,10 +20,20 @@ const projects = [
     altThumbnail: "Potential Thumbnail",
   },
   {
+    title: "React Weather App Demo",
+    subtitle: "React Javascript Heroku",
+    site: "https://react-weather-app-9.herokuapp.com",
+    git: "https://github.com/realjhoo/react-weather-app",
+    description:
+      "A demonstration of a simple React app that retrieves the current weather of a selected location and modifies the background accordingly",
+    thumbnail: "img/react-weather-app.png",
+    altThumbnail: "React Weather App Thumbnail",
+  },
+  {
     title: "Keep Cat Fed",
-    subtitle: "Wordpress WP Themes",
+    subtitle: "Wordpress Niche Site",
     site: "https://keepcatfed.com",
-    git: "https://realjhoo.com/wp-project",
+    git: "",
     description:
       "This affiliate WordPress site uses custom themes to promote Amazon sales",
     thumbnail: "img/keepcatfed.png",
@@ -31,11 +41,11 @@ const projects = [
   },
   {
     title: "The Torque Hub",
-    subtitle: "Wordpress WP Themes",
+    subtitle: "Wordpress Niche Site",
     site: "https://thetorquehub.com",
-    git: "https://realjhoo.com/wp-project",
+    git: "",
     description:
-      "This WordPress site uses custom themes to promote niche Amazon sales",
+      "This WordPress site uses custom themes and SEO strategies to promote niche Amazon sales",
     thumbnail: "img/thetorquehub.png",
     altThumbnail: "Torque Hub Thumbnail",
   },
@@ -44,18 +54,20 @@ const projects = [
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/hoo-project-10",
     git: "https://github.com/realjhoo/fullstack-project-1",
-    description: "Uses Javascript to generate and display random quotes",
+    description:
+      "This project uses javascript to randomly select and display famous (and not-so-famous) quotes",
     thumbnail: "img/project-10.png",
-    altThumbnail: "Project 10 Thumbnail",
+    altThumbnail: "Random Quote Thumbnail",
   },
   {
     title: "API Employee Directory",
     subtitle: "CSS Fetch JSON Javascript",
     site: "https://realjhoo.com/projects/fs-project-8",
     git: "https://github.com/realjhoo/fullstack-project-5",
-    description: "Uses fetch to retrieve random users and allows live search",
+    description:
+      "An employee directory using fetch to retrieve and live search random users",
     thumbnail: "img/project-8.png",
-    altThumbnail: "Project 8 Thumbnail",
+    altThumbnail: "Employee Directory Thumbnail",
   },
   {
     title: "Web App Dashboard",
@@ -63,18 +75,19 @@ const projects = [
     site: "https://realjhoo.com/projects/treehouse-project-7",
     git: "https://github.com/realjhoo/treehouse-project-7",
     description:
-      "A mockup of a web app dashboard using chart.js, featuring local storage capabilities",
+      "Web app dashboard mockup using chart.js and featuring local storage capabilities",
     thumbnail: "img/project-7.png",
-    altThumbnail: "Project 7 Thumbnail",
+    altThumbnail: "Dashboard Demo Thumbnail",
   },
   {
     title: "Javascript Word Game",
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/treehouse-project-6",
     git: "https://github.com/realjhoo/treehouse-project-6",
-    description: "A hangman-style word game created using CSS and Javascript",
+    description:
+      "Wheel of Fortune-style word game created using CSS and Javascript",
     thumbnail: "img/project-6.png",
-    altThumbnail: "Project 6 Thumbnail",
+    altThumbnail: "Wheel of Fortune Thumbnail",
   },
   {
     title: "Photo Gallery",
@@ -82,9 +95,9 @@ const projects = [
     site: "https://realjhoo.com/projects/treehouse-project-5",
     git: "https://github.com/realjhoo/treehouse-project-5",
     description:
-      "An interactive live search photo gallery built using Javascript/Jquery",
+      "Interactive live search photo gallery built using Javascript/Jquery",
     thumbnail: "img/project-5.png",
-    altThumbnail: "Project 5 Thumbnail",
+    altThumbnail: "Gallery Thumbnail",
   },
   {
     title: "Web Style Guide",
@@ -92,16 +105,16 @@ const projects = [
     site: "https://realjhoo.com/projects/treehouse-project-4",
     git: "https://github.com/realjhoo/treehouse-project-4",
     description:
-      "A web style guide built with SASS, using partials, extends, variables and mixins.",
+      "Web style guide styled with SASS, using partials, extends, variables and mixins.",
     thumbnail: "img/project-4.png",
-    altThumbnail: "Project 4 Thumbnail",
+    altThumbnail: "Style Guide Thumbnail",
   },
   {
     title: "Registration Form",
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/fullstack-project-3",
     git: "https://github.com/realjhoo/fullstack-project-3",
-    description: "An HTML5 form built using data validation.",
+    description: "Sign up form demonstrating javascript data validation.",
     thumbnail: "img/project-3.png",
     altThumbnail: "Project 3 Thumbnail",
   },

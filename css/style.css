@@ -201,6 +201,7 @@ button:focus {
   width: 100%;
   height: 100vh;
   background-image: url("../img/jlh-marquee-color.png");
+  /* background-image: url("../img/metest.png"); */
   opacity: 0.5;
   background-attachment: fixed;
 }
@@ -240,11 +241,13 @@ button:focus {
 .marquee .title {
   margin-top: 1rem;
   font-size: 2.2rem;
+  cursor: default;
 }
 
 .marquee .text {
   margin-top: 1rem;
   line-height: 1.7rem;
+  cursor: default;
 }
 
 .motto {
@@ -252,6 +255,7 @@ button:focus {
   z-index: 1;
   top: 90%;
   left: 45%;
+  cursor: default;
 }
 
 .motto-text {
@@ -434,13 +438,13 @@ button:focus {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  background-color: #968569;
+  background-color: #cf9e62;
   border-radius: 50%;
 }
 
 .about-icon {
-  width: 170px;
-  margin-left: -32px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .about-text {
@@ -523,42 +527,71 @@ button:focus {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
 }
 
 .modal-card {
   position: relative;
-  border: 2px solid #e4e4e4;
+  border: 2px solid #ffebd2;
   border-radius: 6px;
-  background-color: #fff;
-  width: 24rem;
-  height: 15rem;
-  text-align: center;
+  background-color: #ffebd2;
+  width: 28.5rem;
+  height: 16rem;
   color: #333;
-}
-
-.modal-card p {
-  margin: 1rem;
-  font-size: 1rem;
-}
-
-.modal-contact {
-  margin: 0.5rem;
   font-family: var(--title-font);
+  box-shadow: 8px 8px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.angle {
+  width: 0;
+  height: 0;
+  border-top: 200px solid #4e6e7d;
+  border-right: 200px solid transparent;
+}
+
+.modal-card-img {
+  width: 160px;
+  height: 160px;
+  margin-top: -14rem;
+}
+
+.modal-card-name {
+  margin-left: 10.5rem;
+  margin-top: -140px;
+  color: #ce9e62;
+}
+
+.modal-card-job-title {
+  margin-left: 10.5rem;
+}
+
+.modal-email {
+  margin-left: 10.5rem;
+  transform: translate(-50%);
 }
 
 .modal-link {
-  cursor: pointer;
   text-decoration: none;
-  color: #777;
+  color: var(--text-color);
+  color: #333;
+}
+
+.icon {
+  margin: 0.5rem 1.6rem 0 1.6rem;
+  width: 2.5rem;
+}
+
+.soci-icons {
+  margin-left: 31%;
+  margin-top: 50px;
 }
 
 .close-btn {
   position: absolute;
   top: 0;
-  right: 1.5rem;
+  right: 0.5rem;
   transform: rotate(45deg);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -568,19 +601,6 @@ button:focus {
 
 .close-btn:hover {
   transform: rotate(135deg);
-}
-
-.icon {
-  margin: 0.5rem 0.9rem 0 0.9rem;
-  width: 2rem;
-}
-
-.socials a {
-  margin: 0 0.6rem 0 0.6rem;
-  text-decoration: none;
-  color: #333;
-  font-family: var(--title-font);
-  font-weight: 700;
 }
 
 /* =-=-=-=-=-=-=-= FOOTER RULES =-=-=-=-=-=-=-=-=-=-=-= */
@@ -604,7 +624,7 @@ footer {
   text-shadow: 2px 2px #000;
 }
 
-/*  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-= */
+/*  =-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-= */
 /* tablets */
 @media (max-width: 768px) {
   #background {
