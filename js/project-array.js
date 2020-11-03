@@ -10,6 +10,16 @@ const projects = [
     altThumbnail: "Toki Pona Practice Thumbnail",
   },
   {
+    title: "Yet Another Todo App",
+    subtitle: "Simple Angular Demo App",
+    site: "https://yata-yet-another-todo-app.herokuapp.com/",
+    git: "https://github.com/realjhoo/yet-another-todo-app",
+    description:
+      "YATA (Yet Another Todo App) is a demo of a simple todo app using Angular and deployed on Heroku",
+    thumbnail: "img/yata.png",
+    altThumbnail: "Yata Thumbnail",
+  },
+  {
     title: "Potential",
     subtitle: "Chrome Extension",
     site: "https://realjhoo.com/projects/potential/",
