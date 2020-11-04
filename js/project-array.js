@@ -110,16 +110,6 @@ const projects = [
     altThumbnail: "Gallery Thumbnail",
   },
   {
-    title: "Web Style Guide",
-    subtitle: "HTML CSS SASS",
-    site: "https://realjhoo.com/projects/treehouse-project-4",
-    git: "https://github.com/realjhoo/treehouse-project-4",
-    description:
-      "Web style guide styled with SASS, using partials, extends, variables and mixins.",
-    thumbnail: "img/project-4.png",
-    altThumbnail: "Style Guide Thumbnail",
-  },
-  {
     title: "Registration Form",
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/fullstack-project-3",
