@@ -1,5 +1,15 @@
 const projects = [
   {
+    title: "Y A P A",
+    subtitle: "Vue Javascript CSS",
+    site: "https://realjhoo.github.io/yapa/",
+    git: "https://github.com/realjhoo/yapa",
+    description:
+      "YAPA (Yet Another Pomodoro App) is a simple Vue app deployed on github pages. It provides standard a Pomodoro timer, with breaks and a long rest.",
+    thumbnail: "img/yapa.png",
+    altThumbnail: "Pomodoro Thumbnail",
+  },
+  {
     title: "Toki Pona Practice",
     subtitle: "HTML CSS Javascript",
     site: "https://realjhoo.com/projects/toki-pona-sitelen/",
@@ -11,7 +21,7 @@ const projects = [
   },
   {
     title: "Yet Another Todo App",
-    subtitle: "Simple Angular Demo App",
+    subtitle: "Simple Angular App",
     site: "https://yata-yet-another-todo-app.herokuapp.com/",
     git: "https://github.com/realjhoo/yet-another-todo-app",
     description:
@@ -30,7 +40,7 @@ const projects = [
     altThumbnail: "Potential Thumbnail",
   },
   {
-    title: "React Weather App Demo",
+    title: "React Weather App",
     subtitle: "React Javascript Heroku",
     site: "https://react-weather-app-9.herokuapp.com",
     git: "https://github.com/realjhoo/react-weather-app",
