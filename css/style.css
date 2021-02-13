@@ -1,4 +1,3 @@
-/* style.css for realjhoo */
 @import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat:400,700");
 
 /* =-=-=-=-=-=-=-=-=-=-= VARIABLES =-=-=-=-=-=-=-= */
@@ -8,7 +7,7 @@
   --contrast-color: #2c2c2c; /* Tucy Black */
   /* Unused palette color Rusted Red */
   /* #c1432e */
-  --menu-bg-color: rgba(75, 103, 119, 0.6);
+  --menu-bg-color: rgba(75, 103, 119, 0.85);
   --project-mask: rgba(75, 103, 119, 0.5);
   --second-contrast-color: #f4f4f4; /* White Smoke */
   --text-font: Montserrat;
@@ -48,6 +47,7 @@ button:focus {
   top: 0;
   left: 0;
   z-index: 4;
+  display: none;
 }
 
 .menu-wrap .toggle {
@@ -194,78 +194,56 @@ button:focus {
   opacity: 0.6;
 }
 
-/* =-=-=-=-=-=-=-= MARQUEE & BACKGROUND RULES =-=-=-=-=-=-=-=-=-= */
+/* -=-=-= MARQUEE & BACKGROUND =-=-=-=-=-=-=-=-=-= */
 
 #background {
   filter: blur(7px);
-  /* display: block; */
   transition: filter 0.6s;
   background-repeat: no-repeat;
-  background-size: cover;
-  /* width: 100vw; */
-  height: 80vh;
-  background-image: url("../img/jlh-marquee-color.png");
-  opacity: 0.8;
-  /* background-attachment: fixed; */
+  width: 100%;
+  height: 50vh; /* 0 causes collapse */
+  background-image: url("../img/keyb.jpg");
+  opacity: 0.5;
 }
 
 #background:hover {
-  filter: blur(0);
-}
-
-#background .marquee {
-  filter: blur(0);
-  transition: filter 0.4s;
-}
-
-#background:hover .marquee {
   filter: blur(0px);
 }
 
 .marquee {
   position: absolute;
-  top: 15%;
-  left: 75%;
-  z-index: 1;
-  margin-top: 225px;
-  margin-left: -145px;
-  width: 300px;
-  height: 350px;
+  top: 10%;
+  left: 55%;
   text-align: center;
   text-shadow: 2px 2px var(--contrast-color);
 }
 
 .marquee .logo {
   width: 75px;
-  height: 75px;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 
+.marquee .name,
 .marquee .title {
   margin-top: 1rem;
   font-size: 2.2rem;
   cursor: default;
 }
 
+.marquee .title {
+  margin-top: 0;
+}
+
 .marquee .text {
   margin-top: 1rem;
-  line-height: 1.7rem;
   cursor: default;
 }
 
 .motto {
-  position: absolute;
-  z-index: 1;
-  top: 70%;
-  left: 45%;
   cursor: default;
 }
 
-.motto-text {
-  font-size: 1.1rem;
-}
-
-/* =-=-=-=-=-=-=-=-=-=-= LINK BAR RULES =-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-= LINK BAR =-=-=-=-=-=-=-=-=-= */
 .container {
   margin: auto;
   padding: 4rem 1rem;
@@ -328,7 +306,7 @@ button:focus {
   padding-top: 12px;
 }
 
-/* =-=-=-=-=-=-=-= PORTFOLIO RULES =-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-= PORTFOLIO =-=-=-=-=-=-=-=-=-= */
 .portfolio-header {
   padding: 1rem;
   font-family: var(--title-font);
@@ -409,14 +387,16 @@ button:focus {
 
 .button {
   margin: 5px;
+  border: solid #fff 1px;
   border-radius: 6px;
-  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.6);
   background-color: var(--accent-color);
-  padding: 5px;
+  padding: 10px 15px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--second-contrast-color);
-  font-size: 0.7rem;
+  font-size: 1rem;
+  font-family: var(--text-font);
+  font-weight: 400;
 }
 
 .button:hover {
@@ -424,7 +404,7 @@ button:focus {
   background-color: var(--main-color);
 }
 
-/*  =-=-=-=-=-=-=-= ABOUT ME RULES =-=-=-=-=-=-=-=-=-= */
+/*  =-=-=-=-=-=-=-= ABOUT ME =-=-=-=-=-=-=-=-=-= */
 .about-header {
   font-family: var(--title-font);
   padding-bottom: 8px;
@@ -484,7 +464,7 @@ button:focus {
   color: var(--second-contrast-color);
 }
 
-/* =-=-=-=-=-=-=-=-= SKILLS RULES =-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-=-= SKILLS =-=-=-=-=-=-=-=-= */
 .skills {
   padding: 12px;
 }
@@ -523,7 +503,7 @@ button:focus {
   cursor: default;
 }
 
-/* =-=-=-=-=-=-=-= MODAL CARD RULES =-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-= MODAL CARD =-=-=-=-=-=-=-=-=-= */
 .modal-mask {
   display: none;
   position: fixed;
@@ -609,7 +589,7 @@ button:focus {
   transform: rotate(135deg);
 }
 
-/* =-=-=-=-=-=-=-= FOOTER RULES =-=-=-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=-=-=-=-=-= */
 footer {
   padding: 2.2rem;
 }
@@ -630,23 +610,31 @@ footer {
   text-shadow: 2px 2px var(--contrast-color);
 }
 
-/*  =-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-= */
-/* tablets */
-@media (max-width: 768px), (max-height: 768px) {
+/*  =-=-=-=-=-=-= MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-= */
+/* mobile devices */
+@media (max-width: 415px) {
+  .menu-wrap {
+    display: block;
+  }
+
   #background {
-    height: 50vh;
-    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  #background:hover {
+    filter: blur(7px);
+    opacity: 0.5;
   }
 
   .marquee {
-    top: 22%;
+    top: 5%;
     left: 50%;
-    margin-top: 5px;
+    transform: translate(-50%);
   }
 
   .marquee .logo {
-    height: 90px;
-    width: 90px;
+    width: 100px;
   }
 
   .marquee .text {
@@ -669,69 +657,5 @@ footer {
   .container > div {
     border-bottom: var(--accent-color) dashed 1px;
     padding: 1.2rem 1rem;
-  }
-}
-
-/* phones */
-@media (max-width: 420px) {
-  .marquee .title {
-    margin-top: 1rem;
-    font-size: 1rem;
-  }
-
-  .container {
-    margin: auto;
-    padding: 1rem;
-  }
-
-  .button {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-
-  .project-description {
-    font-size: 1rem;
-  }
-
-  .modal-card {
-    width: 20rem;
-  }
-
-  .back-to-top {
-    bottom: 0.5rem;
-    right: 4rem;
-    font-size: 2.5rem;
-  }
-
-  #background {
-    filter: blur(2px);
-  }
-
-  #background:hover {
-    filter: blur(2px);
-  }
-
-  #background:hover .marquee {
-    filter: blur(0px);
-  }
-}
-
-/*  landscape */
-@media (max-height: 500px) {
-  #background {
-    height: 75vh;
-    width: 100%;
-  }
-
-  .marquee .title {
-    font-size: 1.1rem;
-  }
-
-  .marquee .text {
-    display: none;
-  }
-
-  .marquee {
-    top: 0;
   }
 }

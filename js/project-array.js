@@ -5,7 +5,7 @@ const projects = [
     site: "https://realjhoo.github.io/yapa/",
     git: "https://github.com/realjhoo/yapa",
     description:
-      "YAPA (Yet Another Pomodoro App) is a simple Vue app deployed on github pages. It provides standard a Pomodoro timer, with breaks and a long rest.",
+      "YAPA (Yet Another Pomodoro App) is a simple Vue app deployed on github pages.",
     thumbnail: "img/yapa.png",
     altThumbnail: "Pomodoro Thumbnail",
   },
@@ -15,7 +15,7 @@ const projects = [
     site: "https://realjhoo.com/projects/toki-pona-sitelen/",
     git: "https://github.com/realjhoo/toki-pona",
     description:
-      "A prototype web app for a future React Native project that provides practice for those studying the constructed language, Toki Pona. This project uses the linja-pona font",
+      "Web app that provides practice for the constructed language, Toki Pona.",
     thumbnail: "img/toki-pona.png",
     altThumbnail: "Toki Pona Practice Thumbnail",
   },
@@ -25,7 +25,7 @@ const projects = [
     site: "https://yata-yet-another-todo-app.herokuapp.com/",
     git: "https://github.com/realjhoo/yet-another-todo-app",
     description:
-      "YATA (Yet Another Todo App) is a demo of a simple todo app using Angular and deployed on Heroku",
+      "YATA (Yet Another Todo App) is a simple todo app using Angular deployed on Heroku",
     thumbnail: "img/yata.png",
     altThumbnail: "Yata Thumbnail",
   },
@@ -34,8 +34,7 @@ const projects = [
     subtitle: "Chrome Extension",
     site: "https://realjhoo.com/projects/potential/",
     git: "https://github.com/realjhoo/potential-chrome-extension",
-    description:
-      "Based on Momentum, this Chrome Extension displays local weather, moon phase and date & time, as well as selected holidays and inspirational messages.",
+    description: "A Chrome extension based on Momentum.",
     thumbnail: "img/project-11.png",
     altThumbnail: "Potential Thumbnail",
   },
@@ -45,7 +44,7 @@ const projects = [
     site: "https://react-weather-app-9.herokuapp.com",
     git: "https://github.com/realjhoo/react-weather-app",
     description:
-      "A demonstration of a simple React app that retrieves the current weather of a selected location and modifies the background accordingly",
+      "A demo React app that retrieves the current weather of a selected location and modifies the background accordingly",
     thumbnail: "img/react-weather-app.png",
     altThumbnail: "React Weather App Thumbnail",
   },

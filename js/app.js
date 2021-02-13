@@ -1,4 +1,4 @@
-// Copyright (c) 2019 - 2020 Jerry L Hoover
+// Copyright (c) 2019 - 2021 Jerry L Hoover
 // All rights reserved
 // javascript for realjhoo
 
@@ -96,7 +96,7 @@ function parallax_effect() {
 //  =======================================================
 function injectAboutMeText() {
   const aboutText = document.querySelector(".about-text");
-  aboutText.innerHTML = `Hoover is a web developer with <a class="techdegree" href="https://www.credential.net/13865366">Front End</a> and <a class="techdegree" href="https://www.credential.net/365f03e7-0673-41e7-9491-8c13598563bd"> Full Stack</a> Techdegrees from <a class="techdegree" href="https://teamtreehouse.com">Team Treehouse</a>. He enjoys building websites, turning an empty page into something beautiful and functional using tools like Javascript, CSS, React, Node, Express and, on occasion, even Angular.`;
+  aboutText.innerHTML = `Hoover is a web developer with <a class="techdegree" href="https://www.credential.net/13865366">Front End</a> and <a class="techdegree" href="https://www.credential.net/365f03e7-0673-41e7-9491-8c13598563bd"> Full Stack</a> Techdegrees from <a class="techdegree" href="https://teamtreehouse.com">Team Treehouse</a>. He enjoys building websites, turning an empty page into something both beautiful and functional using tools like Javascript, CSS, React, Node, Express and, on occasion, even Angular.`;
 }
 
 // ========================================================

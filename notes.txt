@@ -1,8 +1,0 @@
-TODO:
-
-1. Install local Wordpress
-2. Retrieve torque hub and cat fed and run them on local WP server
-3. Git them
-4. Update portfolio
-
-Last: Replace hero image
