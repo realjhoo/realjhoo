@@ -49,6 +49,15 @@ const projects = [
     altThumbnail: "React Weather App Thumbnail",
   },
   {
+    title: "Saxon Date",
+    subtitle: "Saxon Date & Numerare Dierum",
+    site: "https://saxondate.com",
+    git: "https://github.com/realjhoo/saxon-date-web",
+    description: "My collection of notional calendars",
+    thumbnail: "img/saxondate.png",
+    altThumbnail: "Saxon Date Thumbnail",
+  },
+  {
     title: "Keep Cat Fed",
     subtitle: "Wordpress Niche Site",
     site: "https://keepcatfed.com",
