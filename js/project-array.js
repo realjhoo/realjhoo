@@ -20,16 +20,6 @@ const projects = [
     altThumbnail: "Toki Pona Practice Thumbnail",
   },
   {
-    title: "Yet Another Todo App",
-    subtitle: "Simple Angular App",
-    site: "https://yata-yet-another-todo-app.herokuapp.com/",
-    git: "https://github.com/realjhoo/yet-another-todo-app",
-    description:
-      "YATA (Yet Another Todo App) is a simple todo app using Angular deployed on Heroku",
-    thumbnail: "img/yata.png",
-    altThumbnail: "Yata Thumbnail",
-  },
-  {
     title: "Potential",
     subtitle: "Chrome Extension",
     site: "https://realjhoo.com/projects/potential/",
@@ -39,53 +29,14 @@ const projects = [
     altThumbnail: "Potential Thumbnail",
   },
   {
-    title: "React Weather App",
-    subtitle: "React Javascript Heroku",
-    site: "https://react-weather-app-9.herokuapp.com",
-    git: "https://github.com/realjhoo/react-weather-app",
-    description:
-      "A demo React app that retrieves the current weather of a selected location and modifies the background accordingly",
-    thumbnail: "img/react-weather-app.png",
-    altThumbnail: "React Weather App Thumbnail",
-  },
-  {
     title: "Saxon Date",
-    subtitle: "Saxon Date & Numerare Dierum",
+    subtitle: "Typescript",
     site: "https://saxondate.com",
     git: "https://github.com/realjhoo/saxon-date-web",
-    description: "My collection of notional calendars",
+    description:
+      "A lunisolar calendar inspired by the Venerable Bede based on Metonic tables",
     thumbnail: "img/saxondate.png",
     altThumbnail: "Saxon Date Thumbnail",
-  },
-  {
-    title: "Keep Cat Fed",
-    subtitle: "Wordpress Niche Site",
-    site: "https://keepcatfed.com",
-    git: "",
-    description:
-      "This affiliate WordPress site uses custom themes to promote Amazon sales",
-    thumbnail: "img/keepcatfed.png",
-    altThumbnail: "Keep Cat Fed Thumbnail",
-  },
-  {
-    title: "The Torque Hub",
-    subtitle: "Wordpress Niche Site",
-    site: "https://thetorquehub.com",
-    git: "",
-    description:
-      "This WordPress site uses custom themes and SEO strategies to promote niche Amazon sales",
-    thumbnail: "img/thetorquehub.png",
-    altThumbnail: "Torque Hub Thumbnail",
-  },
-  {
-    title: "Random Quotes",
-    subtitle: "HTML CSS Javascript",
-    site: "https://realjhoo.com/projects/hoo-project-10",
-    git: "https://github.com/realjhoo/fullstack-project-1",
-    description:
-      "This project uses javascript to randomly select and display famous (and not-so-famous) quotes",
-    thumbnail: "img/project-10.png",
-    altThumbnail: "Random Quote Thumbnail",
   },
   {
     title: "API Employee Directory",
@@ -96,16 +47,6 @@ const projects = [
       "An employee directory using fetch to retrieve and live search random users",
     thumbnail: "img/project-8.png",
     altThumbnail: "Employee Directory Thumbnail",
-  },
-  {
-    title: "Web App Dashboard",
-    subtitle: "HTML CSS Grid Javascript",
-    site: "https://realjhoo.com/projects/treehouse-project-7",
-    git: "https://github.com/realjhoo/treehouse-project-7",
-    description:
-      "Web app dashboard mockup using chart.js and featuring local storage capabilities",
-    thumbnail: "img/project-7.png",
-    altThumbnail: "Dashboard Demo Thumbnail",
   },
   {
     title: "Javascript Word Game",

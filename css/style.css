@@ -658,4 +658,20 @@ footer {
     border-bottom: var(--accent-color) dashed 1px;
     padding: 1.2rem 1rem;
   }
+
+  .modal-card {
+    font-size: 0.7rem;
+  }
+
+  .modal-card-img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    margin-top: -12rem;
+    margin-left: 0.5rem;
+  }
+
+  .soci-icons {
+    margin-left: 10%;
+  }
 }
