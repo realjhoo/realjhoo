@@ -2,8 +2,8 @@
 
 /* =-=-=-=-=-=-=-=-=-=-= VARIABLES =-=-=-=-=-=-=-= */
 :root {
-  --main-color: #4b6777; /* Silver Headdress */
-  --accent-color: #ce9e62; /* Rusted Gold */
+  --main-color: #4b6777; /* Copper Oxide */
+  --accent-color: #ce9e62; /* Tarnished Gold */
   --contrast-color: #2c2c2c; /* Tucy Black */
   /* Unused palette color Rusted Red */
   /* #c1432e */
@@ -243,13 +243,14 @@ button:focus {
   cursor: default;
 }
 
-/* =-=-=-=-=-=-= LINK BAR =-=-=-=-=-=-=-=-=-= */
 .container {
   margin: auto;
   padding: 4rem 1rem;
   max-width: 960px;
   overflow: hidden;
 }
+
+/* =-=-=-=-=-=-= LINK BAR =-=-=-=-=-=-=-=-=-= */
 
 .link-bar h3,
 .skills h3 {
@@ -405,29 +406,62 @@ button:focus {
 }
 
 /*  =-=-=-=-=-=-=-= ABOUT ME =-=-=-=-=-=-=-=-=-= */
-.about-header {
-  font-family: var(--title-font);
-  padding-bottom: 8px;
-}
-
-.link-about {
+.about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.about-icon-wrapper {
+.outer-circle {
+  display: flex;
+  width: 310px;
+  height: 310px;
   position: relative;
-  width: 200px;
-  height: 200px;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  background-color: #cf9e62;
   border-radius: 50%;
 }
 
-.about-icon {
-  width: 200px;
-  margin-left: 0px;
+.inner-circle {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+.about-face {
+  position: absolute;
+  background-image: url("../img/about.png");
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.rotating-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  animation: rotateText 15s linear infinite;
+}
+
+.rotating-text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.5rem;
+  transform-origin: 0 155px; /*half outer circle */
+}
+
+.about-header {
+  font-family: var(--title-font);
+  padding-bottom: 8px;
+}
+
+.about-text-container {
+  margin-top: 12%;
 }
 
 .about-text {
@@ -673,5 +707,15 @@ footer {
 
   .soci-icons {
     margin-left: 10%;
+  }
+}
+
+/*  =-=-=-=-=-=-= ANIMATIONS =-=-=-=-=-=-=-=-=-=-= */
+@keyframes rotateText {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

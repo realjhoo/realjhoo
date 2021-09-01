@@ -99,6 +99,18 @@ function injectAboutMeText() {
   aboutText.innerHTML = `Hoover is a web developer with <a class="techdegree" href="https://www.credential.net/13865366">Front End</a> and <a class="techdegree" href="https://www.credential.net/365f03e7-0673-41e7-9491-8c13598563bd"> Full Stack</a> Techdegrees from <a class="techdegree" href="https://teamtreehouse.com">Team Treehouse</a>. He enjoys building websites, turning an empty page into something both beautiful and functional using tools like Javascript, CSS, React, Node, Express and, on occasion, even Angular.`;
 }
 
+// --------------------------------------------------------
+function rotateText() {
+  const rotatingText = document.querySelector(".rotating-text p");
+  rotatingText.innerHTML = rotatingText.innerText
+    .split("")
+    .map(
+      (char, i) =>
+        `<span style="transform:rotate(${i * 8.155}deg)">${char}</span>`
+    )
+    .join("");
+}
+
 // ========================================================
 function main() {
   createBox();
@@ -108,6 +120,7 @@ function main() {
   back_to_top();
   parallax_effect();
   injectAboutMeText();
+  rotateText();
 }
 
 // ========================================================
